@@ -4,6 +4,10 @@
   "description": "<p align=\"center\">   <img width=\"200\" src=\"./.github/proffy-logo.png\">   <p align=\"center\">Sua plataforma de estudos online</p> </p>",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/index.js",
+    "lint": "npx eslint ./src ./test --ext .ts",
+    "lint:fix": "npx eslint ./src ./test --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +24,9 @@
   "devDependencies": {
     "@types/module-alias": "^2.0.0",
     "@types/node": "^14.14.7",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.13.0",
     "typescript": "^4.0.5"
   },
   "dependencies": {
